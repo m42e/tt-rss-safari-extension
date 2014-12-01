@@ -1,0 +1,38 @@
+<html>
+
+<head>
+</head>
+
+<script>
+	function performCommand(event) {
+	    if (event.command === "TTRSSToolbarItem") {
+	    	var currentWindow = safari.application.activeBrowserWindow;
+	    	var currentTab = currentWindow.activeTab;
+			var currentTabUrl = encodeURIComponent(currentTab.url);
+			var currentTabTitle = encodeURIComponent(currentTab.title);
+
+			var ttrssTab = currentWindow.openTab();
+			ttrssTab.url = safari.extension.settings.ttrssurl + '?op=subscribe&feed_url='+ currentTabUrl ;
+
+			ttrssTab.addEventListener("beforeNavigate", function(event) {
+			// Close tab when bookmark saved or aborted and return user to original tab
+				//if (!event.url.match('delicious.com/save|delicious.com/login')) {
+				//	currentTab.activate();
+				//	ttrssTab.close();
+				//}
+			});
+		}
+	}
+ 
+	function validateCommand(event) {
+	    if (event.command === "TTRSSToolbarItem") {
+	        // Disable the button if there is no URL loaded in the tab.
+	        event.target.disabled = !event.target.browserWindow.activeTab.url;
+	    }
+	}
+
+	safari.application.addEventListener("command", performCommand, false);
+	safari.application.addEventListener("validate", validateCommand, false);
+</script>
+
+</html>

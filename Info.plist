@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>m42e</string>
+	<key>Builder Version</key>
+	<string>10600.1.25.1</string>
+	<key>CFBundleDisplayName</key>
+	<string>tt-rss</string>
+	<key>CFBundleIdentifier</key>
+	<string>de.m42e.safari-ttrss</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>Chrome</key>
+	<dict>
+		<key>Context Menu Items</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>TTRSSToolbarItem</string>
+				<key>Identifier</key>
+				<string>TTRSSContextItem</string>
+				<key>Title</key>
+				<string>Subscribe with ttrss</string>
+			</dict>
+		</array>
+		<key>Database Quota</key>
+		<real>1048576</real>
+		<key>Global Page</key>
+		<string>ttrssGlobalsPage.html</string>
+		<key>Toolbar Items</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>TTRSSToolbarItem</string>
+				<key>Identifier</key>
+				<string>TTRSSToolbarItem</string>
+				<key>Image</key>
+				<string>tt-rss.png</string>
+				<key>Label</key>
+				<string>TTRSS</string>
+				<key>Palette Label</key>
+				<string>TTRSS</string>
+				<key>Tool Tip</key>
+				<string>Subscribe with TT RSS</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Content</key>
+	<dict>
+		<key>Scripts</key>
+		<dict/>
+	</dict>
+	<key>Description</key>
+	<string>Subscribe with your tt-rss</string>
+	<key>DeveloperIdentifier</key>
+	<string>4BW3732QUV</string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict>
+			<key>Include Secure Pages</key>
+			<true/>
+			<key>Level</key>
+			<string>All</string>
+		</dict>
+	</dict>
+	<key>Update Manifest URL</key>
+	<string>http://www.m42e.de/content/dev/safari/updates/tt-rss.plist</string>
+	<key>Website</key>
+	<string>http://www.m42e.de</string>
+</dict>
+</plist>
